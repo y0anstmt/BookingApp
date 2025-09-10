@@ -1,4 +1,4 @@
-package org.acme.repository;
+\=package org.acme.repository;
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -10,7 +10,7 @@ import java.util.Optional;
 public class OrdersRepository implements PanacheRepository<Orders> {
 
     public Optional<Orders> findOrderByEmail(String email){
-        Orders order = find("email",email).firstResult();
+        Orders order = find("email", email).firstResult();
         if(order!=null){
             return Optional.of(order);
         }
