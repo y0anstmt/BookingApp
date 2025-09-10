@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Review extends PanacheEntity {
-    @Column(nullable = false,unique = true)
+    @Column(nullable = false)
     private int rating;
 
     @Column(nullable = false, length = 500)

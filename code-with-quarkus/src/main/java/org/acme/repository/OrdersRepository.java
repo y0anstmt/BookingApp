@@ -8,6 +8,7 @@ import java.util.Optional;
 
 @ApplicationScoped
 public class OrdersRepository implements PanacheRepository<Orders> {
+
     public Optional<Orders> findOrderByEmail(String email){
         Orders order = find("email", email).firstResult();
         if(order!=null){
