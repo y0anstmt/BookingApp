@@ -158,3 +158,7 @@ ALTER TABLE authuser_roles
 
 ALTER TABLE authuser_roles
     ADD CONSTRAINT fk_autrol_on_roles FOREIGN KEY (role_id) REFERENCES Roles (id);
+
+ALTER TABLE Adress RENAME CONSTRAINT pk_adress TO pk_address;
+ALTER TABLE Review DROP CONSTRAINT uc_review_rating;
+ALTER SEQUENCE Adress_seq RENAME TO Address_seq;
