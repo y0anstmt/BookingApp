@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @ApplicationScoped
 public class ReviewRepository implements PanacheRepository<Review> {
+
     public Optional<User> findReviewByEmail(String email){
         Review review = find("email", email).firstResult();
         if(review!=null){
